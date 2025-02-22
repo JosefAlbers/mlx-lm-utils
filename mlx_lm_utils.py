@@ -3,10 +3,10 @@ from mlx_lm.models.cache import make_prompt_cache
 import mlx.core as mx
 
 class Chat:
-    def __init__(self, model_path="mlx-community/DeepSeek-R1-Distill-Qwen-7B-4bit", think='</think>' max_think=5000, max_kv_size=None):
+    def __init__(self, model_path="mlx-community/DeepSeek-R1-Distill-Qwen-7B-4bit", think='</think>', max_think=5000, max_kv_size=None):
         self.model, self.tokenizer = load(model_path)
         self.think = think
-        self.max_think=max_think
+        self.max_think = max_think
         self.reset(max_kv_size=max_kv_size)
     def reset(self, max_kv_size=None, system=''):
         self.prompt_cache = make_prompt_cache(self.model, max_kv_size=max_kv_size)
