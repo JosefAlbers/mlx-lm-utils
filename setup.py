@@ -7,7 +7,7 @@ setup(
     name='mlx-lm-utils',
     url='https://github.com/JosefAlbers/mlx-lm-utils',
     py_modules=['mlx_lm_utils'],
-    version='0.0.3',
+    version='0.0.4',
     readme="README.md",
     author_email="albersj66@gmail.com",
     description="MLX-LM utils",
